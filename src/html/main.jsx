@@ -2,18 +2,37 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Link } from 'react-router-dom';
 
-import '../css/main.css'
+import '../css/style.css';
 
 const Main = () => {
     return (
         <React.Fragment>
             <main>
-                <div className='my'>
-                    I'm
-                </div>
-                <div className='job'>
-                    Developer
-                </div>
+                <span className='my'>
+                    I'm a
+                </span>
+                <ul className='job'>
+                    <li>
+                        <span>
+                            Developer
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            Freelancer
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            Designer
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            Youtuber
+                        </span>
+                    </li>
+                </ul>
             </main>
         </React.Fragment>
     );

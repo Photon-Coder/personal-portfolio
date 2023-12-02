@@ -1,26 +1,59 @@
 main{
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    display: flex;
 }
 
 .my{
     color: #fff;
     font-size: 60px;
-    display: inline;
-    margin-right: 1.5%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
-.job{
-    color: #fff;
+main .job{
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.job li{
+    position: relative;
+    top: 0;
+    color: #0ef;
     font-size: 60px;
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    list-style: none;
+    padding: 0 20px;
+    text-shadow: 0 0 10px #0ef;
+    animation: slide 12s steps(4) infinite, colorful 6s infinite;
+}
+
+@keyframes slide{
+    100%{
+        top: -360px;
+    }
+}
+
+@keyframes colorful{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.job li span{
+    position: relative;
+}
+
+.job li span::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 400px;
+    height: 90px;
+    background: #000;
+    border-left: 2px solid #0ef;
+    animation: typing 1.5s steps(10) infinite alternate;
+}
+
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
 }
