@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import Index from './html/index';
+import Introduction from './html/introduction';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/introduction" element={<Introduction />} />
       </Routes>
     </Router>
   </React.StrictMode>

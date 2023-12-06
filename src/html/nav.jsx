@@ -28,7 +28,7 @@ const Nav = () => {
                     <li className='list'>
                         <b></b>
                         <b></b>
-                        <Link to='/'>
+                        <Link to='/introduction'>
                             <span className='icon'>
                                 <ion-icon name="person-outline"></ion-icon>
                             </span>
