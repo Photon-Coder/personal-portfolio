@@ -5,13 +5,12 @@ import Nav from './nav';
 
 import '../css/style.css';
 
-const Introduction = () => {
+const Docker = () => {
     return (
         <React.Fragment>
             <Nav />
-            <IntM />
         </React.Fragment>
     );
 };
 
-export default Introduction;
+export default Docker;

@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-import {setupNav} from '../js/nav';
+import { setupNav } from '../js/nav';
 import '../css/style.css';
+import Logo from '../img/logo.jpg';
 
 const Nav = () => {
+    const location = useLocation();
+    
     useEffect(() => {
         setupNav();
       }, []);
@@ -13,7 +16,17 @@ const Nav = () => {
         <React.Fragment>
             <nav className='navigation'>
                 <ul>
-                    <li className='list active'>
+                    <li>
+                        <Link to='/'>
+                            <span className='logo'>
+                                <img src={Logo} alt='Logo' />
+                            </span>
+                            <span className='title'>
+                                GY Profile
+                            </span>
+                        </Link>
+                    </li>
+                    <li className={`list ${location.pathname === '/' ? 'active' : ''}`}>
                         <b></b>
                         <b></b>
                         <Link to='/'>
@@ -25,7 +38,7 @@ const Nav = () => {
                             </span>
                         </Link>
                     </li>
-                    <li className='list'>
+                    <li className={`list ${location.pathname === '/introduction' ? 'active' : ''}`}>
                         <b></b>
                         <b></b>
                         <Link to='/introduction'>
@@ -37,10 +50,10 @@ const Nav = () => {
                             </span>
                         </Link>
                     </li>
-                    <li className='list'>
+                    <li className={`list ${location.pathname === '/github' ? 'active' : ''}`}>
                         <b></b>
                         <b></b>
-                        <Link to='/'>
+                        <Link to='/github'>
                             <span className='icon'>
                                 <ion-icon name="logo-github"></ion-icon>
                             </span>
@@ -49,15 +62,39 @@ const Nav = () => {
                             </span>
                         </Link>
                     </li>
-                    <li className='list'>
+                    <li className={`list ${location.pathname === '/youtube' ? 'active' : ''}`}>
                         <b></b>
                         <b></b>
-                        <Link to='/'>
+                        <Link to='/youtube'>
                             <span className='icon'>
                                 <ion-icon name="logo-youtube"></ion-icon>
                             </span>
                             <span className='title'>
                                 Youtube
+                            </span>
+                        </Link>
+                    </li>
+                    <li className={`list ${location.pathname === '/docker' ? 'active' : ''}`}>
+                        <b></b>
+                        <b></b>
+                        <Link to='/docker'>
+                            <span className='icon'>
+                                <ion-icon name="logo-docker"></ion-icon>
+                            </span>
+                            <span className='title'>
+                                Docker
+                            </span>
+                        </Link>
+                    </li>
+                    <li className={`list ${location.pathname === '/mail' ? 'active' : ''}`}>
+                        <b></b>
+                        <b></b>
+                        <Link to='/mail'>
+                            <span className='icon'>
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </span>
+                            <span className='title'>
+                                Mail
                             </span>
                         </Link>
                     </li>

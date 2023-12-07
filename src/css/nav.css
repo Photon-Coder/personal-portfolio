@@ -95,17 +95,36 @@ nav ul li.active a{
     color: #fff;
 }
 
-nav li:nth-child(1) .icon ion-icon,
-nav li:nth-child(2) .icon ion-icon{
+nav li:nth-child(2) .icon ion-icon,
+nav li:nth-child(3) .icon ion-icon,
+nav li:nth-child(7) .icon ion-icon{
     color: #f60;
 }
 
-nav li:nth-child(3) .icon ion-icon{
+nav li:nth-child(4) .icon ion-icon{
     color: #6c3982;
 }
 
-nav li:nth-child(4) .icon ion-icon{
+nav li:nth-child(5) .icon ion-icon{
     color: #f00;
+}
+
+nav li:nth-child(6) .icon ion-icon{
+    color: #1d63ed;
+}
+
+nav ul li a .logo{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+nav ul li a .logo img{
+    width: 40px;
+    height: 40px;
 }
 
 nav ul li a .icon{

@@ -6,6 +6,10 @@ import { Helmet } from 'react-helmet';
 
 import Index from './html/index';
 import Introduction from './html/introduction';
+import Github from './html/github';
+import Youtube from './html/youtube';
+import Docker from './html/docker';
+import Mail from './html/mail';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +22,10 @@ root.render(
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/introduction" element={<Introduction />} />
+        <Route path="/github" element={<Github />} />
+        <Route path="/youtube" element={<Youtube />} />
+        <Route path="/docker" element={<Docker />} />
+        <Route path="/mail" element={<Mail />} />
       </Routes>
     </Router>
   </React.StrictMode>
