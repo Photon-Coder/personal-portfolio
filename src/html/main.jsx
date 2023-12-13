@@ -5,7 +5,7 @@ import '../css/style.css';
 const Main = () => {
     return (
         <React.Fragment>
-            <main>
+            <main className='centered-main'>
                 <span className='my'>
                     I'm a
                 </span>

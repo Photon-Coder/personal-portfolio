@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import { setupNav } from '../js/nav';
+import { setupNav } from '../components/Nav';
 import '../css/style.css';
-import Logo from '../img/logo.jpg';
+import Logo from '../img/Logo.jpeg';
 
 const Nav = () => {
     const location = useLocation();
     
     useEffect(() => {
         setupNav();
-      }, []);
+    }, []);
 
     return (
         <React.Fragment>
